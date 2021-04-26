@@ -1,7 +1,7 @@
 /*
     ===== Código de TypeScript =====
 */
-// Destructuracion de objectos ################################################
+// Desestructuracion de objectos ################################################
 interface Reproductor {
     volumen: number,
     second: number,
@@ -24,13 +24,13 @@ const reproductor: Reproductor = {
     }
 }
 
-// Sin destructuracion:
+// Sin desestructuracion:
 // console.log('The current volumen is: ', reproductor.volumen);
 // console.log('The current second is: ', reproductor.second);
 // console.log('The current song is: ', reproductor.song);
 // console.log('The author is: ', reproductor.details.author);
 
-// Con destructuracion de objecto
+// Con desestructuracion de objecto
 const { volumen, second, song, details } = reproductor;
 const { author } = details;
 
@@ -39,14 +39,14 @@ console.log('The current second is: ', second);
 console.log('The current song is: ', song);
 console.log('The author is: ', author);
 
-// Destructuracion de arreglos ################################################
+// Desestructuracion de arreglos ################################################
 const dbz: string[] = ['Goku', 'Vegeta', 'Trunks']
 
 // console.log('Personaje 1: ', dbz[0]);
 // console.log('Personaje 2: ', dbz[1]);
 // console.log('Personaje 3: ', dbz[2]);
 
-// Con destructuracion de arreglos
+// Con desestructuracion de arreglos
 const [ p1, p2, p3 ] = dbz;
 
 // En caso de requerir un solo valor del arrego, se deben colocar las comas para
