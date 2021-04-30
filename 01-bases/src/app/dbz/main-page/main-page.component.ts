@@ -9,25 +9,12 @@ import { Personaje } from '../interfaces/dbz.interface';
     styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-    
-    listaPersonajes: Personaje[] = [
-        {
-            nombre: 'Goku',
-            poder: 15000
-        },
-        {
-            nombre: 'Vegeta',
-            poder: 7500
-        }
-    ]
 
     defaultPersonaje: Personaje = {
         nombre: 'Maestro Roshi',
         poder: 10000
     }
 
-    insertarNuevoPersonaje(personaje: Personaje) {
-        this.listaPersonajes.push(personaje);
-    }
+    constructor() {}
 
 }

@@ -2,11 +2,9 @@
 <hr>
 <div class="row">
     <div class="col">
-        <app-personajes [listaPersonajes]="listaPersonajes">
-        </app-personajes>
+        <app-personajes></app-personajes>
     </div>
     <div class="col">
-        <app-agregar [nuevoPersonaje]="defaultPersonaje" (onNuevoPersonaje)="insertarNuevoPersonaje($event)">
-        </app-agregar>
+        <app-agregar [nuevoPersonaje]="defaultPersonaje"></app-agregar>
     </div>
 </div>
