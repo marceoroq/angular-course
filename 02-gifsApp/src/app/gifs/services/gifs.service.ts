@@ -46,7 +46,6 @@ export class GifsService {
             // El http devuelve un "observable" que permite muchas funcionalidades
             this.http.get<SearchGifsResponse>(`${this.giphyAPIUrl}/search`, { params })
                 .subscribe(response => {
-                    console.log(response.data);
                     this.resultados = response.data;
                     // Guardamos los resultados en LocalStorage para tenerlos disponibles
                     localStorage.setItem('resultados',JSON.stringify(this.resultados));
