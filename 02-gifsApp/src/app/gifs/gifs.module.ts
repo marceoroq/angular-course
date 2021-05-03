@@ -1,23 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { GifsPageComponent } from './gifs-page/gifs-page.component';
-import { BusquedaComponent } from './busqueda/busqueda.component';
-import { ResultadosComponent } from './resultados/resultados.component';
-
-
+import { GifsPageComponent } from './pages/gifs-page/gifs-page.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { ResultadosComponent } from './components/resultados/resultados.component';
 
 @NgModule({
-  declarations: [
-    GifsPageComponent,
-    BusquedaComponent,
-    ResultadosComponent
-  ],
-  exports: [
-    GifsPageComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    declarations: [GifsPageComponent, BusquedaComponent, ResultadosComponent],
+    exports: [GifsPageComponent],
+    imports: [CommonModule]
 })
-export class GifsModule { }
+export class GifsModule {}
