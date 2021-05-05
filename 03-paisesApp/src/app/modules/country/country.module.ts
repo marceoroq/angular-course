@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { ByRegionComponent } from './pages/by-region/by-region.component';
 import { ByCapitalComponent } from './pages/by-capital/by-capital.component';
 import { ByCountryComponent } from './pages/by-country/by-country.component';
@@ -9,6 +12,6 @@ import { CountryInfoComponent } from './pages/country-info/country-info.componen
 @NgModule({
     declarations: [ByCapitalComponent, ByCountryComponent, ByRegionComponent, CountryInfoComponent],
     exports: [ByCapitalComponent, ByCountryComponent, ByRegionComponent, CountryInfoComponent],
-    imports: [CommonModule]
+    imports: [CommonModule, FormsModule, RouterModule]
 })
 export class CountryModule {}
