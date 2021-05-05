@@ -5,8 +5,7 @@ import { Country } from '../../models/country.interface';
 
 @Component({
     selector: 'app-by-country',
-    templateUrl: './by-country.component.html',
-    styles: [`.img-flag {width: 40px}`]
+    templateUrl: './by-country.component.html'
 })
 export class ByCountryComponent {
     
@@ -16,7 +15,8 @@ export class ByCountryComponent {
 
     constructor(private countryService: CountryService) {}
 
-    search() {
+    search(query: string) {
+        this.query = query;
         if (this.query.trim().length > 0) {
             this.countryService.searchCountry(this.query)
                 .subscribe(response => {
