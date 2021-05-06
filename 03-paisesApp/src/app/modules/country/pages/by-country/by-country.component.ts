@@ -29,4 +29,8 @@ export class ByCountryComponent {
                 })
         }
     }
+
+    showHints(event: string) {
+        this.hasError = false;
+    }
 }
