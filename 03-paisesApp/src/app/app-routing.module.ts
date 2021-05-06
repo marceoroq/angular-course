@@ -10,7 +10,7 @@ const routes: Routes = [
     {path: '', component: ByCountryComponent, pathMatch: 'full'},
     {path: 'capital', component: ByCapitalComponent},
     {path: 'region', component: ByRegionComponent},
-    {path: 'country/:id', component: CountryInfoComponent},
+    {path: 'country/:code', component: CountryInfoComponent},
     {path: '**', redirectTo: ''},
 ]
 
