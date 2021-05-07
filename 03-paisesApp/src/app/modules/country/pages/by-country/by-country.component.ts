@@ -15,12 +15,12 @@ export class ByCountryComponent {
 
     constructor(private countryService: CountryService) {}
 
-    search(query: string) {
+    searchCountry(query: string) {
         this.query = query;
         if (this.query.trim().length > 0) {
+            this.hasError = false;
             this.countryService.searchCountry(this.query)
                 .subscribe(response => {
-                    this.hasError = false;
                     this.countries = response;
                     this.query = "";
                 }, err => {
