@@ -16,23 +16,19 @@ export class ByRegionComponent {
 
     constructor(private countryService: CountryService) {}
     
-    activateRegion(region: string) {
-        console.log("Region activada:", region)
+    public activateRegion(region: string) {
         this.activeRegion = region;
         this.searchCountries(region);
     }
     
-    getCssClass(region: string): string {
+    public getCssClass(region: string): string {
     	return (region === this.activeRegion)? 'btn ms-2 btn-primary': 'btn ms-2 btn-outline-primary'
     }
     
-    searchCountries(region: string) {
+    public searchCountries(region: string) {
         this.countryService.searchCountryByRegion(region)
-            .subscribe(response => {
-                this.countries = response;
-            }, err => {
-                this.countries = [];
-            })
+            .subscribe(res => this.countries = res, 
+                       err => this.countries = [])
     }
 
 }
